@@ -1,12 +1,12 @@
 {
-  "name": "@it-tool-ui/button",
-  "version": "1.0.6",
+  "name": "@it-tool-ui/avatar",
+  "version": "1.0.1",
   "license": "MIT",
   "author": {
     "name": "Nguyen Dinh Truong",
     "email": "nguyendinhtruong98@gmail.com"
   },
-  "description": "UI Button Component with React & Typescript with TailwindCSS",
+  "description": "UI Avatar Component with React & Typescript with TailwindCSS",
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -38,13 +38,15 @@
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.5.3",
     "tailwindcss-animate": "^1.0.7",
-    "tailwindcss-animation-delay": "^2.0.1"
+    "tailwindcss-animation-delay": "^2.0.1",
+    "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
     "@types/node": "^22.7.5",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
+    "@types/tinycolor2": "^1.4.6",
     "@vitejs/plugin-react": "^4.3.2",
     "@vitejs/plugin-react-swc": "^3.7.1",
     "autoprefixer": "^10.4.20",
@@ -67,10 +69,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/it-tool-ui/button.git"
+    "url": "git+https://github.com/it-tool-ui/avatar.git"
   },
   "bugs": {
-    "url": "https://github.com/it-tool-ui/button/issues"
+    "url": "https://github.com/it-tool-ui/avatar/issues"
   },
-  "homepage": "https://it-tool.app/button"
+  "homepage": "https://it-tool.app/avatar"
 }

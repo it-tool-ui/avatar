@@ -1,5 +1,5 @@
 import "./index.css";
-import Button from "./components/button.component";
-import type { ButtonProps } from "./components/button.types";
+import Avatar from "./components/avatar.component";
+import type { AvatarProps } from "./components/avatar.types";
 
-export { Button, ButtonProps };
+export { Avatar, AvatarProps };
