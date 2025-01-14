@@ -8,5 +8,6 @@ export interface AvatarProps
   name: string;
   bordered?: boolean;
   disabled?: boolean;
+  hideImage?: boolean;
   randomFallbackColor?: boolean;
 }

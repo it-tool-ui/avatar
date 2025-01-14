@@ -14,6 +14,7 @@ const Avatar: React.FC<AvatarProps> = ({
   name,
   radius,
   size,
+  hideImage,
   bordered,
   disabled,
   randomFallbackColor,
@@ -38,7 +39,7 @@ const Avatar: React.FC<AvatarProps> = ({
       }}
       className={clsx(wrapperVariants({ size }), radiusVariants({ radius }))}
     >
-      {showingFallback ? (
+      {hideImage || showingFallback ? (
         <div
           style={{
             backgroundColor: randomFallbackColor
