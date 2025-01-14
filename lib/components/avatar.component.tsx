@@ -33,7 +33,7 @@ const Avatar: React.FC<AvatarProps> = ({
       data-disabled={Boolean(disabled)}
       style={{
         borderColor:
-          showingFallback && randomFallbackColor
+          (hideImage || showingFallback) && randomFallbackColor
             ? randomColor.bgColor
             : "#a3a3a3",
       }}

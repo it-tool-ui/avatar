@@ -21,6 +21,7 @@ import { Avatar } from "@it-tool-ui/avatar";
   src="https://image.com/photo.jpg"
   size="medium"
   radius="full"
+  hideImage={false}
   bordered={false}
   randomFallbackColor={false}
   disabled={false}
