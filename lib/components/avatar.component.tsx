@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from "react";
-import clsx from "clsx";
 import {
   getRandomHexColor,
   getTextColor,
@@ -8,6 +7,7 @@ import {
   wrapperVariants,
 } from "./avatar.helpers";
 import type { AvatarProps } from "./avatar.types";
+import { cn } from "../utils";
 
 const Avatar: React.FC<AvatarProps> = ({
   src,
@@ -18,6 +18,9 @@ const Avatar: React.FC<AvatarProps> = ({
   bordered,
   disabled,
   randomFallbackColor,
+  className,
+  imageClassName,
+  fallbackClassName,
 }) => {
   const [showingFallback, setShowingFallback] = useState<boolean>(!src);
 
@@ -37,7 +40,11 @@ const Avatar: React.FC<AvatarProps> = ({
             ? randomColor.bgColor
             : "#a3a3a3",
       }}
-      className={clsx(wrapperVariants({ size }), radiusVariants({ radius }))}
+      className={cn(
+        wrapperVariants({ size }),
+        radiusVariants({ radius }),
+        className
+      )}
     >
       {hideImage || showingFallback ? (
         <div
@@ -47,9 +54,10 @@ const Avatar: React.FC<AvatarProps> = ({
               : "#a3a3a3",
             color: randomFallbackColor ? randomColor.textColor : "white",
           }}
-          className={clsx(
+          className={cn(
             "flex h-full w-full items-center justify-center",
-            radiusVariants({ radius })
+            radiusVariants({ radius }),
+            fallbackClassName
           )}
         >
           <span className={textVariants({ size })}>
@@ -60,7 +68,11 @@ const Avatar: React.FC<AvatarProps> = ({
         <img
           src={src}
           alt={name}
-          className={clsx("h-full w-full", radiusVariants({ radius }))}
+          className={cn(
+            "h-full w-full",
+            radiusVariants({ radius }),
+            imageClassName
+          )}
           onError={() => setShowingFallback(true)}
         />
       )}

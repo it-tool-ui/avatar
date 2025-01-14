@@ -10,4 +10,7 @@ export interface AvatarProps
   disabled?: boolean;
   hideImage?: boolean;
   randomFallbackColor?: boolean;
+  className?: string;
+  imageClassName?: string;
+  fallbackClassName?: string;
 }
